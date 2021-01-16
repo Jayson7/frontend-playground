@@ -1,0 +1,99 @@
+.logo {
+    position: absolute;
+    bottom: 0%;
+    left: 12%;
+    transform: translate(-50%, -15%);
+    color: rgb(215, 145, 107);
+    overflow: hidden;
+    border: 3px solid transparent;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dever {
+    font-size: 30px;
+    margin-top: -10px;
+    padding: 10px;
+    font-weight: 300;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.logo .second span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    background: linear-gradient(to right, transparent, #7a0c7a);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.logo .second span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #7a0c7a);
+    animation: animate2 1s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.logo .second span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    background: linear-gradient(to left, transparent, #7a0c7a);
+    animation: animate3 1s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.logo .second span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #7a0c7a);
+    animation: animate4 1s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

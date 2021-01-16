@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="welcome">
+        <h2>Welcome</h2>
+    </div>
+<p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit suscipit quibusdam voluptates debitis error, optio ut dolores maiores doloribus velit architecto dolorem doloremque dicta! Est soluta dicta esse! Nobis, at! </p>
+<p>This page turns violet when you hold the V key.</p> 
+    <section>
+        <div class="loader"></div>
+        <div class="count"></div>
+    </section>
+    
+    <script src="jquery.js"></script>
+    <script>
+$(document).ready(function(){
+    var count = 0;
+    var counter = setInterval(function(){
+        if(count < 101){
+            $('.count').text(count + '% ' + ' ' + ' ' + ' JaysonCodes');
+            $('.loader').css('width', count + '%' );
+            count++;
+        }
+        else{
+            clearInterval(counter)
+        }
+    },80);
+});
+    </script>
+</body>
+</html>
