@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div">
+        <div class="box"></div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: rgb(7, 5, 5);
+    }
+    
+    .div {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+    
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 400px;
+        position: absolute;
+        border: 2px solid white;
+        animation: boxshadow 2s ease infinite;
+    }
+    
+    @keyframes boxshadow {
+        0% {
+            box-shadow: 10px 15px 1px #555;
+        }
+        100% {
+            box-shadow: 23px 45px 11px #555;
+        }
+    }
+</style>
+
+</html>

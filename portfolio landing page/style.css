@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+}
+
+body {
+    /* background-color: rgb(14, 12, 12); */
+    margin: 0;
+    font-family: monospace;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(197, 210, 221);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 45px;
+    background-color: rgb(7, 7, 119);
+}
+
+.toggle {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 40px;
+    margin-left: 20px;
+    height: 37px;
+    /* background-color: #fff; */
+    border-radius: 2px;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-family: "Ubuntu", "cursive";
+    font-weight: 900;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    text-decoration: underline;
+    color: rgb(36, 36, 36);
+}
+
+.toggle span {
+    background-color: #fff;
+    width: 80%;
+    height: 3px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+li {
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 750px) {
+    .top {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    nav {
+        width: 300px;
+        height: calc(100vh - 45px);
+        position: fixed;
+        top: 45px;
+        z-index: 2;
+        transition: transform 1s ease;
+        left: 0;
+        transform: translateX(-500px);
+        flex-direction: column;
+    }
+    .toggle {
+        display: flex;
+    }
+    ul {
+        flex-direction: column;
+        width: 100%;
+        height: 70%;
+    }
+    li {
+        margin-left: -30px;
+    }
+    .active {
+        transform: translateX(0px);
+        transition: transform 1s ease;
+        z-index: 2;
+    }
+}
+
+section {
+    height: calc(100vh - 120px);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section1,
+.section2 {
+    width: 500px;
+    height: 100%;
+}
+
+.section2 {
+    background: url("./1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section1 {
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section1 h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.section1 p {
+    font-size: 1.2rem;
+    font-family: cursive;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn1,
+.btn2 {
+    padding: 14px 40px;
+    margin: 5px 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.btn1 {
+    background-color: rgb(7, 7, 119);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.btn2 {
+    border: 1px solid white;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid rgb(197, 210, 221);
+    background: transparent;
+}
+
+.btn2:hover {
+    background-color: rgb(36, 36, 36);
+    color: #eee;
+    transition: 1s ease background;
+}
+
+@media screen and (max-width: 1020px) {
+    section {
+        height: 100%;
+    }
+    .section1 {
+        height: 500px;
+        /* background-color: aquamarine; */
+    }
+    .section2 {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav {
+        width: 100%;
+    }
+    .section1 {
+        width: 100%;
+        height: 600px;
+    }
+    .section2 {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 352px) {
+    nav {
+        width: 100%;
+    }
+    section {
+        margin-top: 10vh;
+    }
+    .section1 {
+        width: 100%;
+        height: 100vh;
+    }
+    .section1 h1 {
+        font-size: 2.5rem;
+    }
+    .section1 p {
+        font-size: 1rem;
+    }
+    .section2 {
+        height: 400px;
+        width: 100%;
+    }
+}
