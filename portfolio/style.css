@@ -1,4 +1,21 @@
-/* #loader {
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Questrial&family=Ubuntu:wght@500&display=swap");
+:root {
+    --font-designed: "Lobster";
+    --font-header: "Ubuntu";
+    --font-body: "Questrial";
+    --color-head: #0e2e44;
+    --color-beauty: #430d99;
+    --color-alert: #338b2b;
+    --color-white: ##fff;
+    --color-dark: #000;
+}
+
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+#loader {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -40,7 +57,8 @@
 
 #myDiv {
     display: none;
-} */
+    /* transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s; */
+}
 
 
 /* navbar */
@@ -98,18 +116,36 @@ ul li a {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background-image: url("./images/svg.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .section1-div-1 {
     width: 400px;
+    margin: 10px;
     height: 400px;
     background-color: #0e2e44;
 }
 
 .section1-div-2 {
+    margin: 10px;
     width: 400px;
     height: 400px;
     background-color: #70818d;
+}
+
+.text-div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.text-div1 h6 {
+    font-family: var(--font-header);
 }
 
 
