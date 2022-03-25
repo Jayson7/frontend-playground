@@ -1,4 +1,4 @@
-#loader {
+/* #loader {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -40,7 +40,7 @@
 
 #myDiv {
     display: none;
-}
+} */
 
 
 /* navbar */
@@ -79,5 +79,49 @@ ul li {
     list-style-type: none;
 }
 
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Ubuntu";
+}
+
 
 /* end navbar */
+
+
+/* section 1 */
+
+.section1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.section1-div-1 {
+    width: 400px;
+    height: 400px;
+    background-color: #0e2e44;
+}
+
+.section1-div-2 {
+    width: 400px;
+    height: 400px;
+    background-color: #70818d;
+}
+
+
+/* end o section 1 */
+
+
+/* section 2 */
+
+.section2 {
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* end o section 2 */
