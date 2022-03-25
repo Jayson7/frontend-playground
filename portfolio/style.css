@@ -107,6 +107,10 @@ ul li a {
     font-family: "Ubuntu";
 }
 
+.toggle {
+    display: none;
+}
+
 
 /* end navbar */
 
@@ -221,9 +225,23 @@ ul li a {
 }
 
 @media screen and (max-width: 840px) {
+    .toggle {
+        color: var(--color-white);
+        position: fixed;
+        top: 15px;
+        font-size: 2rem;
+        z-index: 3;
+        right: 50px;
+        display: flex;
+    }
     .section1 {
         width: 100vw;
         height: 100%;
+    }
+    header {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
     }
     .section1-div-1 {
         height: 100vh;
