@@ -7,12 +7,14 @@
     --color-beauty: #430d99;
     --color-alert: yellow;
     --color-white: #fff;
-    --color-faint: rgba(245, 245, 245, 0.933);
+    --color-faint: rgba(255, 255, 255, 0.3);
     --color-dark: #000;
 }
 
 * {
     margin: 0;
+    overflow-x: hidden;
+    padding: 0;
 }
 
 body {
@@ -21,8 +23,9 @@ body {
 
 #loader {
     position: absolute;
-    left: 50%;
+    left: 55%;
     top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +64,6 @@ body {
 
 #myDiv {
     display: none;
-    /* transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s; */
 }
 
 
@@ -69,8 +71,13 @@ body {
 
 header {
     background-color: var(--color-dark);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -79,11 +86,16 @@ header {
     margin-left: 20px;
     font-size: 1.7rem;
     font-family: "Ubuntu";
+    z-index: 2;
     font-weight: 900;
 }
 
-nav {
-    width: 100%;
+.logo span {
+    color: var(--color-alert);
+}
+
+.big-screen {
+    width: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -111,6 +123,19 @@ ul li a {
     display: none;
 }
 
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons i {
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px 0;
+}
+
 
 /* end navbar */
 
@@ -133,7 +158,6 @@ ul li a {
 
 .section1-div-1 {
     width: auto;
-    margin: 10px;
     /* height: 400px;
     background-color: #0e2e44; */
 }
@@ -174,7 +198,7 @@ ul li a {
     font-family: var(--font-header);
     font-size: 1.2rem;
     font-weight: 500;
-    color: var(--color-white);
+    color: var(--color-faint);
 }
 
 .text-div1 p {
@@ -224,7 +248,18 @@ ul li a {
     }
 }
 
+
+/* screen size under 840 px */
+
 @media screen and (max-width: 840px) {
+    #loader {
+        position: absolute;
+        left: 57%;
+        top: 50%;
+    }
+    header {
+        justify-content: space-between;
+    }
     .toggle {
         color: var(--color-white);
         position: fixed;
@@ -234,38 +269,83 @@ ul li a {
         right: 50px;
         display: flex;
     }
+    .big-screen {
+        display: flex;
+        transform: translateY(100vh);
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        transition: transform 700ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        z-index: 3;
+        left: 0;
+        background-color: #000;
+        height: calc(100vh - 60px);
+    }
+    .active {
+        transform: translateY(0vh);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 3;
+        transition: transform 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background-color: #000;
+        height: calc(100vh - 60px);
+    }
+    nav ul {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .icons i {
+        color: var(--color-white);
+        font-size: 1rem;
+        padding: 10px;
+    }
     .section1 {
         width: 100vw;
         height: 100%;
     }
-    header {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-    }
     .section1-div-1 {
         height: 100vh;
         width: 100%;
+        margin-top: 10vh;
     }
     .text-div1 {
-        width: 100%;
+        width: 95%;
+        /* padding: 20px; */
         text-align: center;
         /* background-color: #338b2b; */
     }
     .text-div1 h6 {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     .text-div1 h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin: 15px 0;
     }
-    .text-div1 h4 {}
     .text-div1 p {
-        margin: 20px;
+        margin: 15px 0;
         font-size: 1rem;
-        padding: 10px;
         text-align: center;
-        width: 100%;
+        padding: 10px !important;
+        width: 95%;
         color: var(--color-white);
         font-family: var(--font-body);
     }
@@ -273,6 +353,12 @@ ul li a {
         height: 50vh;
         width: 100%;
     } */
+}
+
+@media screen and (max-width: 500px) {
+    .text-div1 h6 {
+        font-size: 1rem;
+    }
 }
 
 
