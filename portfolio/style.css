@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Questrial&family=Ubuntu:wght@500&display=swap");
+
+/* set variables needed  */
+
 :root {
     --font-designed: "Lobster";
     --font-header: "Ubuntu";
@@ -11,15 +14,31 @@
     --color-dark: #000;
 }
 
+
+/* end of variables needed */
+
+
+/* selector for basic needs */
+
 * {
     margin: 0;
     overflow-x: hidden;
     padding: 0;
 }
 
+
+/* end of selector */
+
+
+/*  let the magic begin */
+
 body {
     scroll-behavior: smooth;
+    /*for scroll behaviour */
 }
+
+
+/* preloader */
 
 #loader {
     position: absolute;
@@ -65,6 +84,9 @@ body {
 #myDiv {
     display: none;
 }
+
+
+/* preloader ends here  */
 
 
 /* navbar */
@@ -374,6 +396,16 @@ ul li a {
 .section2 {
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 840px) {
+    .section2 {
+        height: 100%;
+    }
 }
 
 
