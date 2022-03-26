@@ -427,7 +427,7 @@ ul li a {
 
 .section2-body {
     display: flex;
-    height: 50vh;
+    height: 60vh;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -442,6 +442,15 @@ ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+@media screen and (max-width: 1049px) {
+    .section2-body-box1,
+    .section2-body-box2 {
+        width: 80%;
+        margin: 0;
+        justify-content: space-evenly;
+    }
 }
 
 .p1 {
@@ -459,6 +468,18 @@ ul li a {
 @media screen and (max-width: 840px) {
     .section2 {
         height: 100%;
+        margin-top: 10vh;
+    }
+}
+
+@media screen and (max-width: 517px) {
+    .section2-body-box1,
+    .section2-body-box2 {
+        width: 100%;
+        padding: 5px;
+    }
+    .p1 {
+        font-size: 1.5rem;
     }
 }
 
