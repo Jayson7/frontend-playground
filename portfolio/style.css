@@ -20,12 +20,6 @@
 
 /* selector for basic needs */
 
-* {
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
-}
-
 
 /* end of selector */
 
@@ -35,6 +29,8 @@
 body {
     scroll-behavior: smooth;
     /*for scroll behaviour */
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -396,9 +392,10 @@ ul li a {
 /* section 2 */
 
 .section2 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
+    margin: 10vh 0;
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
@@ -425,7 +422,7 @@ ul li a {
 
 .section2-body {
     display: flex;
-    height: 60vh;
+    height: 100%;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -447,6 +444,7 @@ ul li a {
     .section2-body-box2 {
         width: 80%;
         margin: 0;
+        height: 100%;
         justify-content: space-evenly;
     }
 }
@@ -461,12 +459,15 @@ ul li a {
 .p4 {
     font-size: 1rem;
     font-family: var(--font-body);
+    margin: 15px 0;
 }
 
 @media screen and (max-width: 840px) {
     .section2 {
         height: 100%;
-        margin-top: 10vh;
+    }
+    .section2-header {
+        margin: 10vh 0;
     }
     .section2-body {
         height: 100%;
@@ -495,23 +496,29 @@ ul li a {
     height: 100vh;
     width: 100%;
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
 }
 
+.section3-header {
+    overflow: hidden;
+}
+
 .section3-header h1 {
     font-size: 2rem;
     font-family: var(--font-designed);
-    font-weight: 700;
     margin-left: 20px;
     position: relative;
     padding: 20px;
+    height: 100%;
 }
 
 .section3-header h1::after {
     content: "";
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 20px;
     background-color: var(--color-beauty);
@@ -525,6 +532,32 @@ ul li a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.section3-box1,
+.section3-box2 {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-box3 {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 840px) {
+    .section3-header {
+        margin: 10vh 0;
+    }
+    .section3 {
+        height: 100%;
+    }
+    .section3-body {
+        height: 100%;
+    }
 }
 
 
