@@ -42,8 +42,8 @@ body {
 
 #loader {
     position: absolute;
-    left: 53%;
-    top: 53%;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
@@ -97,6 +97,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 3;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -403,10 +404,6 @@ ul li a {
     justify-content: space-evenly;
 }
 
-.section2-header {
-    /* background-color: rgb(143, 66, 66); */
-}
-
 .section2-header h1 {
     font-size: 2rem;
     font-family: var(--font-designed);
@@ -471,12 +468,16 @@ ul li a {
         height: 100%;
         margin-top: 10vh;
     }
+    .section2-body {
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 517px) {
     .section2-body-box1,
     .section2-body-box2 {
-        width: 100%;
+        width: 97%;
+        text-align: center;
         padding: 5px;
     }
     .p1 {
@@ -489,6 +490,42 @@ ul li a {
 
 
 /* section3 */
+
+.section3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.section3-header h1 {
+    font-size: 2rem;
+    font-family: var(--font-designed);
+    font-weight: 700;
+    margin-left: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.section3-header h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background-color: var(--color-beauty);
+    width: 220px;
+    height: 2px;
+}
+
+.section3-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 
 /* section3 ends here  */
