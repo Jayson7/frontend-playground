@@ -649,6 +649,8 @@ ul li a {
 
 .section4-intro {
     text-align: center;
+    height: 100%;
+    margin-top: 10vh;
 }
 
 .section4-intro h2 {
@@ -659,15 +661,32 @@ ul li a {
     color: var(--color-white);
 }
 
+.section4-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
 .ability-box {
     width: 400px;
-    height: 400px;
+    height: 200px;
+    /* background-color: #338b2b; */
     color: var(--color-faint);
+    margin: 5px;
 }
 
 .ability-number {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     color: var(--color-beauty);
+    font-weight: bolder;
+    font-family: var(--font-designed);
+}
+
+.ability-box {
+    margin-top: 15vh;
 }
 
 
