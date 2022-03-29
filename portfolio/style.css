@@ -507,7 +507,7 @@ ul li a {
 }
 
 .section3-header {
-    overflow: hidden;
+    height: 100%;
 }
 
 .section3-header h1 {
