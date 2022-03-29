@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Questrial&family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Overlock&family=Questrial&family=Ubuntu:wght@500&display=swap");
 
 /* set variables needed  */
 
@@ -6,6 +6,7 @@
     --font-designed: "Lobster";
     --font-header: "Ubuntu";
     --font-body: "Questrial";
+    --font-neutral: "Overlock";
     --color-head: #0e2e44;
     --color-beauty: #430d99;
     --color-alert: yellow;
@@ -619,7 +620,8 @@ ul li a {
     align-items: center;
     justify-content: space-evenly;
     margin-top: 20vh;
-    background-color: var(--color-dark);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("./images/2a.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 .section4-header {
@@ -687,6 +689,11 @@ ul li a {
 
 .ability-box {
     margin-top: 15vh;
+}
+
+.ability-header {
+    font-size: 1.2rem;
+    font-family: var(--font-neutral);
 }
 
 
