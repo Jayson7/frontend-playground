@@ -411,6 +411,7 @@ ul li a {
     font-family: var(--font-designed);
     font-weight: 700;
     margin-left: 20px;
+    text-transform: uppercase;
     position: relative;
     padding: 20px;
 }
@@ -427,6 +428,7 @@ ul li a {
 
 .section2-body {
     display: flex;
+    margin-top: 10vh;
     height: 100%;
     align-items: center;
     justify-content: space-around;
@@ -514,6 +516,7 @@ ul li a {
 
 .section3-header h1 {
     font-size: 2rem;
+    text-transform: uppercase;
     font-family: var(--font-designed);
     margin-left: 20px;
     position: relative;
@@ -534,6 +537,7 @@ ul li a {
 
 .section3-body {
     height: 100%;
+    margin-top: 10vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -632,6 +636,7 @@ ul li a {
 
 .section4-header h1 {
     font-size: 2rem;
+    text-transform: uppercase;
     font-family: var(--font-designed);
     font-weight: 700;
     margin-left: 20px;
@@ -656,6 +661,18 @@ ul li a {
     height: 100%;
     margin-top: 10vh;
     width: 550px;
+}
+
+@media screen and (max-width: 840px) {
+    .section4-header {
+        margin: 10vh 0;
+    }
+    .section4 {
+        height: 100%;
+    }
+    .section4-intro {
+        width: 100%;
+    }
 }
 
 .section4-intro h2 {
@@ -743,3 +760,71 @@ ul li a {
 
 
 /* section4 ends here  */
+
+
+/* section5 starts here  */
+
+.section5 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20vh;
+}
+
+.section5-header {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.section5-header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: var(--font-designed);
+    font-weight: 700;
+    margin-left: 20px;
+    color: var(--color-dark);
+    position: relative;
+    padding: 20px;
+}
+
+.section5-header h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--color-beauty);
+    width: 120px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+.section5-intro {
+    text-align: center;
+    height: 100%;
+    margin-top: 10vh;
+    width: 550px;
+}
+
+.section5-intro h1 {
+    font-size: 1.5rem;
+    font-family: var(--font-neutral);
+    color: var(--color-dark);
+}
+
+@media screen and (max-width: 840px) {
+    .section5-header {
+        margin: 10vh 0;
+    }
+    .section5 {
+        height: 100%;
+    }
+    .section5-intro {
+        width: 100%;
+    }
+}
+
+
+/* section5 ends here */
