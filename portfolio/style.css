@@ -907,13 +907,29 @@ ul li a {
 }
 
 .cert-wrapper {
-    width: 90vw;
+    width: 95vw;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     margin-top: 20vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .cert-wrapper {
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 300px);
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cert-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
 
 .cert-box {
