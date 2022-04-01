@@ -41,12 +41,24 @@ window.onscroll = () => {
 
 // modal popup algorithm
 
-let img_real = document.querySelector("work5 img");
+let img_real = document.querySelectorAll("#img-real");
 
 let modalWrapperImg = document.querySelector(".modal-wrapper img");
-let modalWrapper = document.getElementsByClassName("modal-wrpper")[0];
-img_real.addEventListener("click", () => {
-    modalWrapper.style.display = "flex";
+
+let modalWrapper = document.querySelector(".modal-wrapper");
+let times = document.querySelector("span i");
+
+// make the magic happen
+
+img_real.forEach((img) => {
+    img.addEventListener("click", (e) => {
+        modalWrapper.style.display = "flex";
+
+        modalWrapperImg.src = e.target.src;
+    });
 });
 
+times.addEventListener("click", () => {
+    modalWrapper.style.display = "none";
+});
 // modal popup ends here

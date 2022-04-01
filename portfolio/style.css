@@ -845,6 +845,7 @@ ul li a {
     justify-content: center;
     margin: 20px;
     position: relative;
+    border-radius: 10px;
 }
 
 .img-section5 {
@@ -854,7 +855,6 @@ ul li a {
     display: flex;
     align-items: center;
     overflow: hidden;
-    opacity: 0.7;
     justify-content: center;
 }
 
@@ -872,9 +872,14 @@ ul li a {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.7rem;
+    cursor: grab;
     color: var(--color-alert);
     z-index: 2;
     transform: translateY(400px);
+}
+
+.view-section5 .fa {
+    cursor: grab;
 }
 
 .link-section5 {
@@ -933,16 +938,17 @@ ul li a {
     align-items: center;
 }
 
-.modal-wrapper img {
-    width: 500px;
+.md-img {
+    width: 600px;
+    transition: 1s ease-in-out all;
     height: 500px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    border: 2px solid var(--color-white);
 }
 
 .times {
     position: absolute;
+    transition: 1s ease-in-out all;
     right: 20px;
     top: 20px;
     color: var(--color-white);
