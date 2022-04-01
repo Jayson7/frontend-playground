@@ -1042,7 +1042,7 @@ ul li a {
     margin-top: 10vh;
 }
 
-.section5-header h1 {
+.section6-header h1 {
     font-size: 2rem;
     text-transform: uppercase;
     font-family: var(--font-designed);
@@ -1050,16 +1050,17 @@ ul li a {
     margin-left: 20px;
     color: var(--color-dark);
     position: relative;
+    word-spacing: 5px;
     padding: 20px;
 }
 
-.section5-header h1::before {
+.section6-header h1::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 10%;
+    left: 7%;
     background-color: var(--color-beauty);
-    width: 120px;
+    width: 150px;
     height: 2px;
     transform: translate(-50%, -50%);
 }
