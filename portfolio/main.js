@@ -1,3 +1,4 @@
+// loader
 var myVar;
 
 function myFunction() {
@@ -13,6 +14,7 @@ navbar = document.querySelector("nav");
 toggle.addEventListener("click", () => {
     navbar.classList.toggle("active");
 });
+// loader ends here
 
 // scrollspy section
 let section = document.querySelectorAll("section");
@@ -35,3 +37,16 @@ window.onscroll = () => {
         }
     });
 };
+// scrollspy ends here
+
+// modal popup algorithm
+
+let img_real = document.querySelector("work5 img");
+
+let modalWrapperImg = document.querySelector(".modal-wrapper img");
+let modalWrapper = document.getElementsByClassName("modal-wrpper")[0];
+img_real.addEventListener("click", () => {
+    modalWrapper.style.display = "flex";
+});
+
+// modal popup ends here
