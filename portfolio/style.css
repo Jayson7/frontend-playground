@@ -1034,8 +1034,10 @@ ul li a {
 
 .section6 {
     width: 100%;
-    margin-top: 20vh;
+    margin-top: 25vh;
     height: 100vh;
+    padding: 30px;
+    background-color: var(--color-dark);
 }
 
 .section6-header {
@@ -1049,7 +1051,7 @@ ul li a {
     font-family: var(--font-designed);
     font-weight: 700;
     margin-left: 20px;
-    color: var(--color-dark);
+    color: var(--color-beauty);
     position: relative;
     word-spacing: 5px;
     padding: 20px;
@@ -1064,6 +1066,32 @@ ul li a {
     width: 150px;
     height: 2px;
     transform: translate(-50%, -50%);
+}
+
+.section6-body {
+    text-align: left;
+    padding: 30px;
+    margin-top: 10vh;
+}
+
+.mailer a {
+    font-size: 3rem;
+    font-family: var(--font-header);
+    color: var(--color-alert);
+    text-decoration: none;
+}
+
+.section6-body p {
+    font-size: 2rem;
+    width: 70%;
+    margin-top: 5vh;
+    color: var(--color-white);
+}
+
+.section6-body p a {
+    text-decoration: none;
+    color: var(--color-alert);
+    font-family: var(--font-body);
 }
 
 
