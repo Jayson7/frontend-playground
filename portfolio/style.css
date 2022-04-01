@@ -131,7 +131,7 @@ ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 60%;
+    width: 70%;
 }
 
 ul li {
@@ -290,7 +290,7 @@ ul li a {
 
 /* screen size under 840 px */
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 895px) {
     #loader {
         position: absolute;
         left: 57%;
@@ -310,33 +310,33 @@ ul li a {
     }
     .big-screen {
         display: flex;
-        transform: translateY(100vh);
+        transform: translateX(100vw);
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
         width: 100%;
         position: fixed;
         top: 60px;
-        transition: transform 700ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
         z-index: 3;
         left: 0;
         background-color: #000;
         height: calc(100vh - 60px);
     }
     .active {
-        transform: translateY(0vh);
+        transform: translateX(0vw);
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         z-index: 3;
-        transition: transform 500ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
+        transition: transform 300ms cubic-bezier(0.6, 0.04, 0.98, 0.335);
         flex-direction: column;
         width: 100%;
         position: fixed;
         top: 60px;
         left: 0;
         background-color: #000;
-        height: calc(100vh - 60px);
+        height: 100%;
     }
     nav ul {
         flex-direction: column;
@@ -861,6 +861,7 @@ ul li a {
 .img-section5 img {
     width: 300px;
     height: 300px;
+    opacity: 1;
     object-fit: contain;
     object-position: center;
 }
@@ -895,12 +896,36 @@ ul li a {
 .img-section5:hover .link-section5 {
     transform: translateY(-40px);
     transition: transform 1s ease;
+    z-index: 3;
 }
 
 .img-section5:hover .view-section5 {
     transform: translateY(-5px);
     transition: transform 0.7s ease;
+    z-index: 3;
 }
+
+
+/* image hover background effect 
+
+*/
+
+.img-section5:hover img {
+    opacity: 0.3;
+    transition: opacity 1s ease;
+}
+
+
+/*  modal for works */
+
+
+/* end of modal  */
+
+
+/*  hover ends here  */
+
+
+/* certification */
 
 .certification {
     margin-top: 20vh;
@@ -914,13 +939,13 @@ ul li a {
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     margin-top: 20vh;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {
     .cert-wrapper {
         grid-template-columns: repeat(2, 300px);
         grid-template-rows: repeat(3, 300px);
-        justify-content: center;
     }
 }
 
@@ -928,12 +953,19 @@ ul li a {
     .cert-wrapper {
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 300p);
     }
 }
 
 .cert-box {
     background-color: #0e2e44;
+}
+
+.cert-box img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 840px) {
