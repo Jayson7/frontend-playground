@@ -744,6 +744,8 @@ ul li a {
     font-size: 1.8rem;
     margin: 10px 0;
     font-family: var(--font-neutral);
+    padding: 5px;
+    text-align: center;
     color: var(--color-white);
 }
 
@@ -751,6 +753,8 @@ ul li a {
     font-size: 1.2rem;
     font-family: var(--font-neutral);
     color: var(--color-white);
+    padding: 10px;
+    text-align: center;
 }
 
 .action-sec button {
@@ -1114,11 +1118,48 @@ ul li a {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .section6-body p {
+        width: 100%;
+    }
+    .mailer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .cert-wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .section6-body p {
+        font-size: 1.2rem;
+    }
+    .mailer a {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* ends here */
 
 
 /* footer starts here */
+
+.footer {
+    text-align: center;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-family: var(--font-neutral);
+    padding: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-white);
+}
 
 
 /* footer ends here */
