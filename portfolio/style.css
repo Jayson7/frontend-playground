@@ -1094,6 +1094,15 @@ ul li a {
     font-family: var(--font-body);
 }
 
+@media screen and (max-width: 925px) {
+    .section6 {
+        height: 100%;
+    }
+    .cert-wrapper {
+        height: 100%;
+    }
+}
+
 
 /* ends here */
 
