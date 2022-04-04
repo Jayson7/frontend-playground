@@ -24,6 +24,10 @@
     box-sizing: border-box;
 }
 
+#myDiv {
+    overflow-x: hidden;
+}
+
 
 /* selector for basic needs */
 
@@ -311,7 +315,7 @@ ul li a {
     }
     .big-screen {
         display: flex;
-        transform: translateX(100vw);
+        transform: translateX(150vw);
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
@@ -769,6 +773,12 @@ ul li a {
     color: var(--color-dark);
 }
 
+@media screen and (max-width: 800px) {
+    .action-sec button {
+        width: 70%;
+    }
+}
+
 
 /* section4 ends here  */
 
@@ -845,6 +855,7 @@ ul li a {
     align-items: center;
     justify-content: center;
     margin: 20px;
+    overflow: hidden;
     position: relative;
     border-radius: 10px;
 }
@@ -855,7 +866,6 @@ ul li a {
     height: 300px;
     display: flex;
     align-items: center;
-    overflow: hidden;
     justify-content: center;
 }
 
@@ -874,6 +884,7 @@ ul li a {
     transform: translate(-50%, -50%);
     font-size: 1.7rem;
     cursor: grab;
+    transition: transform 1s ease;
     color: var(--color-alert);
     z-index: 2;
     transform: translateY(400px);
@@ -894,6 +905,7 @@ ul li a {
     width: 40px;
     height: 40px;
     transform: translateY(50px);
+    transition: transform 1s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -931,7 +943,6 @@ ul li a {
     width: 100%;
     top: 0;
     left: 0;
-    overflow: hidden;
     transition: 1s ease-in-out all;
     justify-content: center;
     display: none;
